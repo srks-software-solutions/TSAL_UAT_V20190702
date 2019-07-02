@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85656FE3-0810-41BC-BBA0-16424E8F0D9C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>i_facility</RootNamespace>
+    <AssemblyName>i_facility</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\..\Published\bin\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveLog.cs" />
+    <Compile Include="ActiveLogStorage.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CommonFunction.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CalOEE_WODetails.cs" />
+    <Compile Include="Controllers\AutomaticReportGenerationController.cs" />
+    <Compile Include="Controllers\BreakdownCodesController.cs" />
+    <Compile Include="Controllers\CellController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DayStartAndEndTimeController.cs" />
+    <Compile Include="Controllers\DownTimeCategoryController.cs" />
+    <Compile Include="Controllers\DownTimeReasonController.cs" />
+    <Compile Include="Controllers\EMailEscalationController.cs" />
+    <Compile Include="Controllers\EmailReportTypeController.cs" />
+    <Compile Include="Controllers\GenericWorkController.cs" />
+    <Compile Include="Controllers\HMIScreeController.cs" />
+    <Compile Include="Controllers\HoldCodesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IdleCodesController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MachineAllocationController.cs" />
+    <Compile Include="Controllers\MachineCategoryController.cs" />
+    <Compile Include="Controllers\MachineDetailsController.cs" />
+    <Compile Include="Controllers\MachineStatus2Controller.cs" />
+    <Compile Include="Controllers\MachineStatusController.cs" />
+    <Compile Include="Controllers\MacStatusNewController.cs" />
+    <Compile Include="Controllers\MailIDsController.cs" />
+    <Compile Include="Controllers\ManualHMIScreenController.cs" />
+    <Compile Include="Controllers\MasterPartsController.cs" />
+    <Compile Include="Controllers\MessageCodeMasterController.cs" />
+    <Compile Include="Controllers\MimicsDashboardController.cs" />
+    <Compile Include="Controllers\ModuleMasterController.cs" />
+    <Compile Include="Controllers\MultiWorkOrderController.cs" />
+    <Compile Include="Controllers\NewHMIScreenController.cs" />
+    <Compile Include="Controllers\OEEDashboardController.cs" />
+    <Compile Include="Controllers\PartsController.cs" />
+    <Compile Include="Controllers\PartWiseSpController.cs" />
+    <Compile Include="Controllers\PlannedBreakController.cs" />
+    <Compile Include="Controllers\PlantController.cs" />
+    <Compile Include="Controllers\PriorityAlarmController.cs" />
+    <Compile Include="Controllers\RecipientMailIDController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\RolePlayController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\SenderMailIDController.cs" />
+    <Compile Include="Controllers\ShiftDetailsController.cs" />
+    <Compile Include="Controllers\ShiftMasterController.cs" />
+    <Compile Include="Controllers\ShiftMethodController.cs" />
+    <Compile Include="Controllers\ShiftPlannerController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Controllers\TimeLineController.cs" />
+    <Compile Include="Controllers\UnIdentifiedLossEntryController.cs" />
+    <Compile Include="Controllers\UnitsController.cs" />
+    <Compile Include="GetShift.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\alarm_history_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\alarm_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\alarm_report.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\automaticjobcard.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\book.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\code_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cutting_time_report.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cutting_time_report_pdf.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\day_st_end_time.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBMode.cs" />
+    <Compile Include="Models\frommail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\handle_no_ping.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jobcard_details.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\machine_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mailmaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mailmasterprogesc.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\main_time_rep.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\main_time_view.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\message_code_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\message_history_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\opcuttimereport.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\opcuttimereport_pdf.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\operating_time_report.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\operating_time_report_pdf.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\operationlog.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\parameter.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\parametermaster_view.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\parameters_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pcb.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pcbdaq.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pcbdaqin_tbl.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pcbdps_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pcb_details.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pcb_parameters.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\person.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\program_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\program_temp.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\recipientmailid.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\role_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\shift_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblactivitylog.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblapp_paths.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblbreakdown.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblbreakdowncode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblcell.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblcustomer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbldailyprodstatu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbldailyprodstatushi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbldaytiming.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblddl.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbldowntimecategory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbldowntimedetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblemailescalation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblemailreporttype.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblendcode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblescalationlog.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblgenericworkcode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblgenericworkentry.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblhmiscreen.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblholdcode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivedailyprodstatu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivehmiscreen.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivehmiscreenrep.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivelossofentry.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivelossofentryrep.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivemanuallossofentry.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivemanuallossofentryrep.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivemode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivemodedb.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllivemultiwoselection.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllossescode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbllossofentry.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmachineallocation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmachinecategory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmachinedetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmachinedetailsnew.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmachine_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmailid.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmanuallossofentry.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmasterparts_st_sw.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmimic.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmode.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmodulehelper.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmodulemaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblmultipleworkorder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblnetworkdetailsforddl.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbloeedashboardfinalvariable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbloeedashboardvariable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbloeedashboardvariablestoday.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblpart.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblpartwisesp.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblpartwiseworkcenter.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblplannedbreak.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblplant.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblpriorityalarm.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblreportholder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblrole.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblroleplaymaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblsendermailid.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblshiftdetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblshiftdetails_machinewise.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblshiftmethod.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblshiftplanner.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblshift_breaks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblshift_mstr.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblshop.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbltosapfilepath.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbltosapshopname.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblunit.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbluser.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblwolossess.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblworeport.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_autoreportbasedon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_autoreportsetting.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_autoreporttime.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_autoreport_log.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_multiwoselection.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_reportmaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\user_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsqlConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\bootstrap-datepicker.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap\bootstrap.css" />
+    <Content Include="css\fileinput.css" />
+    <Content Include="css\fileinput.min.css" />
+    <Content Include="css\font-awesome-4.3.0\css\font-awesome.css" />
+    <Content Include="css\font-awesome-4.3.0\css\font-awesome.min.css" />
+    <Content Include="css\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\images\ui-icons_444444_256x240.png" />
+    <Content Include="css\images\ui-icons_555555_256x240.png" />
+    <Content Include="css\images\ui-icons_777620_256x240.png" />
+    <Content Include="css\images\ui-icons_777777_256x240.png" />
+    <Content Include="css\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.timepicker.css" />
+    <Content Include="css\main.min.css" />
+    <Content Include="css\pe-icon-7-filled.css" />
+    <Content Include="css\pe-icon-7-stroke.css" />
+    <Content Include="css\prism.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\toastr.css" />
+    <Content Include="css\yourname-custom.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="icons\alarm25 %281%29.png" />
+    <Content Include="icons\alarm25.png" />
+    <Content Include="icons\Andon.png" />
+    <Content Include="icons\broken27.png" />
+    <Content Include="icons\business73 %281%29.png" />
+    <Content Include="icons\business73.png" />
+    <Content Include="icons\businessman242.png" />
+    <Content Include="icons\businessman58.png" />
+    <Content Include="icons\clock130.png" />
+    <Content Include="icons\computer80.png" />
+    <Content Include="icons\document300.png" />
+    <Content Include="icons\email.png" />
+    <Content Include="icons\envelope68.png" />
+    <Content Include="icons\file221.png" />
+    <Content Include="icons\flatscreen.png" />
+    <Content Include="icons\gears1.png" />
+    <Content Include="icons\home168.png" />
+    <Content Include="icons\home63.png" />
+    <Content Include="icons\laptop88.png" />
+    <Content Include="icons\list93.png" />
+    <Content Include="icons\lists4.png" />
+    <Content Include="icons\mailEsc.png" />
+    <Content Include="icons\multiple25.png" />
+    <Content Include="icons\news29 %281%29.png" />
+    <Content Include="icons\news29.png" />
+    <Content Include="icons\newspaper2.png" />
+    <Content Include="icons\OEE.png" />
+    <Content Include="icons\OEE24.png" />
+    <Content Include="icons\OEEWhite.png" />
+    <Content Include="icons\print25.png" />
+    <Content Include="icons\print83.png" />
+    <Content Include="icons\printer60.png" />
+    <Content Include="icons\responsive12.png" />
+    <Content Include="icons\robot25.png" />
+    <Content Include="icons\robot30 %281%29.png" />
+    <Content Include="icons\robot30.png" />
+    <Content Include="icons\screen121 %281%29.png" />
+    <Content Include="icons\screen121.png" />
+    <Content Include="icons\smartphones14.png" />
+    <Content Include="icons\StdWT.png" />
+    <Content Include="icons\text lines2.png" />
+    <Content Include="icons\text lines28.png" />
+    <Content Include="icons\three115.png" />
+    <Content Include="icons\training.png" />
+    <Content Include="icons\user106.png" />
+    <Content Include="icons\user84.png" />
+    <Content Include="icons\users6.png" />
+    <Content Include="icons\working2.png" />
+    <Content Include="Images\120px-Tata_logo.png" />
+    <Content Include="Images\120px-Tata_logoicon.ico" />
+    <Content Include="js\bootstrap-datepicker.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\D3Graphs\c3.css" />
+    <Content Include="js\D3Graphs\c3.js" />
+    <Content Include="js\D3Graphs\d3.js" />
+    <Content Include="js\excanvas.min.js" />
+    <Content Include="js\fileinput.js" />
+    <Content Include="js\fileinput.min.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="js\jquery-migrate-3.0.0.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery-visibility.js" />
+    <Content Include="js\jquery.easytabs.min.js" />
+    <Content Include="js\jquery.flot.categories.js" />
+    <Content Include="js\jquery.flot.crosshair.js" />
+    <Content Include="js\jquery.flot.fillbetween.js" />
+    <Content Include="js\jquery.flot.js" />
+    <Content Include="js\jquery.flot.resize.js" />
+    <Content Include="js\jquery.flot.stack.js" />
+    <Content Include="js\jquery.hashchange.min.js" />
+    <Content Include="js\jquery.sparkline.min.js" />
+    <Content Include="js\jquery.timepicker.min.js" />
+    <Content Include="js\jValidations.js" />
+    <Content Include="js\main.min.js" />
+    <Content Include="js\prefixfree.min.js" />
+    <Content Include="js\prism.js" />
+    <Content Include="js\toastr.min.js" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="libman.json" />
+    <Content Include="css\font-awesome-4.3.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="css\font-awesome-4.3.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="css\font-awesome-4.3.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="css\font-awesome-4.3.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="css\font-awesome-4.3.0\fonts\FontAwesome.otf" />
+    <Content Include="css\font-awesome-4.3.0\less\animated.less" />
+    <Content Include="css\font-awesome-4.3.0\less\bordered-pulled.less" />
+    <Content Include="css\font-awesome-4.3.0\less\core.less" />
+    <Content Include="css\font-awesome-4.3.0\less\fixed-width.less" />
+    <Content Include="css\font-awesome-4.3.0\less\font-awesome.less" />
+    <Content Include="css\font-awesome-4.3.0\less\icons.less" />
+    <Content Include="css\font-awesome-4.3.0\less\larger.less" />
+    <Content Include="css\font-awesome-4.3.0\less\list.less" />
+    <Content Include="css\font-awesome-4.3.0\less\mixins.less" />
+    <Content Include="css\font-awesome-4.3.0\less\path.less" />
+    <Content Include="css\font-awesome-4.3.0\less\rotated-flipped.less" />
+    <Content Include="css\font-awesome-4.3.0\less\stacked.less" />
+    <Content Include="css\font-awesome-4.3.0\less\variables.less" />
+    <Content Include="css\font-awesome-4.3.0\scss\font-awesome.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_animated.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_bordered-pulled.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_core.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_fixed-width.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_icons.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_larger.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_list.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_mixins.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_path.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_rotated-flipped.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_stacked.scss" />
+    <Content Include="css\font-awesome-4.3.0\scss\_variables.scss" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\dataTables.bootstrap.js" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.dataTables.js" />
+    <Content Include="Scripts\jquery.datetimepicker.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\knockout-3.3.0.debug.js" />
+    <Content Include="Scripts\knockout-3.3.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\AutomaticReportGeneration\Copy.cshtml" />
+    <Content Include="Views\AutomaticReportGeneration\Create.cshtml" />
+    <Content Include="Views\AutomaticReportGeneration\Edit.cshtml" />
+    <Content Include="Views\AutomaticReportGeneration\Index.cshtml" />
+    <Content Include="Views\BreakdownCodes\Create.cshtml" />
+    <Content Include="Views\BreakdownCodes\Edit.cshtml" />
+    <Content Include="Views\BreakdownCodes\Index.cshtml" />
+    <Content Include="Views\Cell\Create.cshtml" />
+    <Content Include="Views\Cell\Edit.cshtml" />
+    <Content Include="Views\Cell\Index.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\DayStartAndEndTime\Create.cshtml" />
+    <Content Include="Views\DayStartAndEndTime\Delete.cshtml" />
+    <Content Include="Views\DayStartAndEndTime\Details.cshtml" />
+    <Content Include="Views\DayStartAndEndTime\Edit.cshtml" />
+    <Content Include="Views\DayStartAndEndTime\Index.cshtml" />
+    <Content Include="Views\DownTimeCategory\Create.cshtml" />
+    <Content Include="Views\DownTimeCategory\Delete.cshtml" />
+    <Content Include="Views\DownTimeCategory\Details.cshtml" />
+    <Content Include="Views\DownTimeCategory\Edit.cshtml" />
+    <Content Include="Views\DownTimeCategory\Index.cshtml" />
+    <Content Include="Views\DownTimeReason\Create.cshtml" />
+    <Content Include="Views\DownTimeReason\Delete.cshtml" />
+    <Content Include="Views\DownTimeReason\Details.cshtml" />
+    <Content Include="Views\DownTimeReason\Edit.cshtml" />
+    <Content Include="Views\DownTimeReason\Index.cshtml" />
+    <Content Include="Views\EMailEscalation\Copy.cshtml" />
+    <Content Include="Views\EMailEscalation\Create.cshtml" />
+    <Content Include="Views\EMailEscalation\Edit.cshtml" />
+    <Content Include="Views\EMailEscalation\ImportEmailEscalationDetails.cshtml" />
+    <Content Include="Views\EMailEscalation\Index.cshtml" />
+    <Content Include="Views\EmailReportType\Create.cshtml" />
+    <Content Include="Views\EmailReportType\Edit.cshtml" />
+    <Content Include="Views\EmailReportType\Index.cshtml" />
+    <Content Include="Views\GenericWork\Create.cshtml" />
+    <Content Include="Views\GenericWork\Edit.cshtml" />
+    <Content Include="Views\GenericWork\ImportGenericWorkCodeDetails.cshtml" />
+    <Content Include="Views\GenericWork\Index.cshtml" />
+    <Content Include="Views\HoldCodes\Create.cshtml" />
+    <Content Include="Views\HoldCodes\Edit.cshtml" />
+    <Content Include="Views\HoldCodes\ImportHoldCodes.cshtml" />
+    <Content Include="Views\HoldCodes\Index.cshtml" />
+    <Content Include="Views\IdleCodes\Create.cshtml" />
+    <Content Include="Views\IdleCodes\Edit.cshtml" />
+    <Content Include="Views\IdleCodes\ImportLossCodesDetails.cshtml" />
+    <Content Include="Views\IdleCodes\Index.cshtml" />
+    <Content Include="Views\Login\Create.cshtml" />
+    <Content Include="Views\Login\Edit.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\MachineAllocation\Create.cshtml" />
+    <Content Include="Views\MachineAllocation\Edit.cshtml" />
+    <Content Include="Views\MachineAllocation\Index.cshtml" />
+    <Content Include="Views\MachineCategory\Create.cshtml" />
+    <Content Include="Views\MachineCategory\Edit.cshtml" />
+    <Content Include="Views\MachineCategory\Index.cshtml" />
+    <Content Include="Views\MachineDetails\Create.cshtml" />
+    <Content Include="Views\MachineDetails\Edit.cshtml" />
+    <Content Include="Views\MachineDetails\ImportMachineDetails.cshtml" />
+    <Content Include="Views\MachineDetails\Index.cshtml" />
+    <Content Include="Views\MachineStatus2\Index.cshtml" />
+    <Content Include="Views\MachineStatus\Index.cshtml" />
+    <Content Include="Views\MailIDs\Create.cshtml" />
+    <Content Include="Views\MailIDs\Edit.cshtml" />
+    <Content Include="Views\MailIDs\ImportMailDetails.cshtml" />
+    <Content Include="Views\MailIDs\Index.cshtml" />
+    <Content Include="Views\ManualHMIScreen\BreakDownEntry.cshtml" />
+    <Content Include="Views\ManualHMIScreen\BreakDownList.cshtml" />
+    <Content Include="Views\ManualHMIScreen\DDLList.cshtml" />
+    <Content Include="Views\ManualHMIScreen\DownCodeEntry.cshtml" />
+    <Content Include="Views\ManualHMIScreen\GenericWork.cshtml" />
+    <Content Include="Views\ManualHMIScreen\HoldCodeEntry.cshtml" />
+    <Content Include="Views\ManualHMIScreen\IdleList.cshtml" />
+    <Content Include="Views\ManualHMIScreen\Index.cshtml" />
+    <Content Include="Views\ManualHMIScreen\Maintenance.cshtml" />
+    <Content Include="Views\ManualHMIScreen\PartialFinishedList.cshtml" />
+    <Content Include="Views\MasterParts\Create.cshtml" />
+    <Content Include="Views\MasterParts\Edit.cshtml" />
+    <Content Include="Views\MasterParts\ImportMasterPartsstsw.cshtml" />
+    <Content Include="Views\MasterParts\Index.cshtml" />
+    <Content Include="Views\MessageCodeMaster\Create.cshtml" />
+    <Content Include="Views\MessageCodeMaster\Edit.cshtml" />
+    <Content Include="Views\MessageCodeMaster\Index.cshtml" />
+    <Content Include="Views\MimicsDashboard\Index.cshtml" />
+    <Content Include="Views\ModuleMaster\Create.cshtml" />
+    <Content Include="Views\ModuleMaster\Edit.cshtml" />
+    <Content Include="Views\ModuleMaster\Index.cshtml" />
+    <Content Include="Views\MultiWorkOrder\Create.cshtml" />
+    <Content Include="Views\MultiWorkOrder\Edit.cshtml" />
+    <Content Include="Views\MultiWorkOrder\ImportEnabledMultiWODetails.cshtml" />
+    <Content Include="Views\MultiWorkOrder\Index.cshtml" />
+    <Content Include="Views\OEEDashboard\Index.cshtml" />
+    <Content Include="Views\Parts\Create.cshtml" />
+    <Content Include="Views\Parts\Edit.cshtml" />
+    <Content Include="Views\Parts\ImportPriorityAlarm.cshtml" />
+    <Content Include="Views\Parts\Index.cshtml" />
+    <Content Include="Views\PartWiseSp\ImportPartWiseSP.cshtml" />
+    <Content Include="Views\PlannedBreak\Create.cshtml" />
+    <Content Include="Views\PlannedBreak\Delete.cshtml" />
+    <Content Include="Views\PlannedBreak\Details.cshtml" />
+    <Content Include="Views\PlannedBreak\Edit.cshtml" />
+    <Content Include="Views\PlannedBreak\Index.cshtml" />
+    <Content Include="Views\Plant\Create.cshtml" />
+    <Content Include="Views\Plant\Edit.cshtml" />
+    <Content Include="Views\Plant\Index.cshtml" />
+    <Content Include="Views\PriorityAlarm\Create.cshtml" />
+    <Content Include="Views\PriorityAlarm\Delete.cshtml" />
+    <Content Include="Views\PriorityAlarm\Details.cshtml" />
+    <Content Include="Views\PriorityAlarm\Edit.cshtml" />
+    <Content Include="Views\PriorityAlarm\ImportPriorityAlarm.cshtml" />
+    <Content Include="Views\PriorityAlarm\Index.cshtml" />
+    <Content Include="Views\RecipientMailID\Create.cshtml" />
+    <Content Include="Views\RecipientMailID\Edit.cshtml" />
+    <Content Include="Views\RecipientMailID\Index.cshtml" />
+    <Content Include="Views\Report\AlarmReport.cshtml" />
+    <Content Include="Views\Report\BreakdownList.cshtml" />
+    <Content Include="Views\Report\HMIdate.cshtml" />
+    <Content Include="Views\Report\HMIoperator.cshtml" />
+    <Content Include="Views\Report\IdleList.cshtml" />
+    <Content Include="Views\Report\JobReport.cshtml" />
+    <Content Include="Views\Report\LossAnalysis.cshtml" />
+    <Content Include="Views\Report\ManualWOReport.cshtml" />
+    <Content Include="Views\Report\MRRReport.cshtml" />
+    <Content Include="Views\Report\MURReport.cshtml" />
+    <Content Include="Views\Report\NoLoginReport.cshtml" />
+    <Content Include="Views\Report\OEEReport.cshtml" />
+    <Content Include="Views\Report\OverTimeReport.cshtml" />
+    <Content Include="Views\Report\PartLearning.cshtml" />
+    <Content Include="Views\Report\StdTimeWeightReport.cshtml" />
+    <Content Include="Views\Report\UnAssignedWOReport.cshtml" />
+    <Content Include="Views\Report\UnIdentifiedReport.cshtml" />
+    <Content Include="Views\Report\UtilizationReport.cshtml" />
+    <Content Include="Views\Report\UtilizationReportL.cshtml" />
+    <Content Include="Views\RolePlay\Create.cshtml" />
+    <Content Include="Views\RolePlay\Edit.cshtml" />
+    <Content Include="Views\RolePlay\Index.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
+    <Content Include="Views\Roles\View1.cshtml" />
+    <Content Include="Views\SenderMailID\Create.cshtml" />
+    <Content Include="Views\SenderMailID\Edit.cshtml" />
+    <Content Include="Views\SenderMailID\Index.cshtml" />
+    <Content Include="Views\Shared\Layout1.cshtml" />
+    <Content Include="Views\Shared\Layoutmimics.cshtml" />
+    <Content Include="Views\Shared\_EmptyView.cshtml" />
+    <Content Include="Views\Shared\_IndexUsingDataTable.cshtml" />
+    <Content Include="Views\Shared\_LayoutForDownTime.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_ModulesBasedOnRoleForRolePlay.cshtml" />
+    <Content Include="Views\Shared\_SuperTable.cshtml" />
+    <Content Include="Views\ShiftDetails\Create.cshtml" />
+    <Content Include="Views\ShiftDetails\Edit.cshtml" />
+    <Content Include="Views\ShiftDetails\Index.cshtml" />
+    <Content Include="Views\ShiftMaster\Create.cshtml" />
+    <Content Include="Views\ShiftMaster\Delete.cshtml" />
+    <Content Include="Views\ShiftMaster\Details.cshtml" />
+    <Content Include="Views\ShiftMaster\Edit.cshtml" />
+    <Content Include="Views\ShiftMaster\Index.cshtml" />
+    <Content Include="Views\ShiftMethod\Create.cshtml" />
+    <Content Include="Views\ShiftMethod\Edit.cshtml" />
+    <Content Include="Views\ShiftMethod\Index.cshtml" />
+    <Content Include="Views\ShiftPlanner\Create.cshtml" />
+    <Content Include="Views\ShiftPlanner\Edit.cshtml" />
+    <Content Include="Views\ShiftPlanner\Index.cshtml" />
+    <Content Include="Views\ShiftPlanner\StopPlan.cshtml" />
+    <Content Include="Views\Shop\Create.cshtml" />
+    <Content Include="Views\Shop\Edit.cshtml" />
+    <Content Include="Views\Shop\Index.cshtml" />
+    <Content Include="Views\UnIdentifiedLossEntry\Index.cshtml" />
+    <Content Include="Views\Units\Create.cshtml" />
+    <Content Include="Views\Units\Edit.cshtml" />
+    <Content Include="Views\Units\extra.cshtml" />
+    <Content Include="Views\Units\Index.cshtml" />
+    <Content Include="Views\NewHMIScreen\Index.cshtml" />
+    <Content Include="Views\HMIScree\BreakDownEntry.cshtml" />
+    <Content Include="Views\HMIScree\BreakDownList.cshtml" />
+    <Content Include="Views\HMIScree\ChooseWorkOrder.cshtml" />
+    <Content Include="Views\HMIScree\DDLList.cshtml" />
+    <Content Include="Views\HMIScree\DownCodeEntry.cshtml" />
+    <Content Include="Views\HMIScree\HMIScreenForAdmin.cshtml" />
+    <Content Include="Views\HMIScree\HoldCodeEntry.cshtml" />
+    <Content Include="Views\HMIScree\IdleList.cshtml" />
+    <Content Include="Views\HMIScree\Index.cshtml" />
+    <Content Include="Views\HMIScree\Maintenance.cshtml" />
+    <Content Include="Views\HMIScree\MultiWOQtyEntry.cshtml" />
+    <Content Include="Views\HMIScree\MWCIndex.cshtml" />
+    <Content Include="Views\HMIScree\PartialFinishedList.cshtml" />
+    <Content Include="Views\HMIScree\SelectMachine.cshtml" />
+    <Content Include="Views\HMIScree\Setting.cshtml" />
+    <Content Include="Views\HMIScree\WorkInProgressList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\i_facilitylibrary\i_facilitylibrary.csproj">
+      <Project>{efebeb9c-dd98-4656-b4bc-c63fcecd4ed3}</Project>
+      <Name>i_facilitylibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49492</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49492/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

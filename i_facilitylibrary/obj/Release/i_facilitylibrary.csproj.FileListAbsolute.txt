@@ -1,0 +1,45 @@
+G:\newIfacility\i_facilitylibrary\i_facilitylibrary\bin\Release\i_facilitylibrary.dll
+G:\newIfacility\i_facilitylibrary\i_facilitylibrary\bin\Release\i_facilitylibrary.pdb
+G:\newIfacility\i_facilitylibrary\i_facilitylibrary\bin\Release\Dapper.dll
+G:\newIfacility\i_facilitylibrary\i_facilitylibrary\bin\Release\Dapper.xml
+G:\newIfacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csprojAssemblyReference.cache
+G:\newIfacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CoreCompileInputs.cache
+G:\newIfacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CopyComplete
+G:\newIfacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.dll
+G:\newIfacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.pdb
+E:\ifacility\i_facilitylibrary\i_facilitylibrary\bin\Release\i_facilitylibrary.dll
+E:\ifacility\i_facilitylibrary\i_facilitylibrary\bin\Release\i_facilitylibrary.pdb
+E:\ifacility\i_facilitylibrary\i_facilitylibrary\bin\Release\Dapper.dll
+E:\ifacility\i_facilitylibrary\i_facilitylibrary\bin\Release\Dapper.xml
+E:\ifacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csprojAssemblyReference.cache
+E:\ifacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CoreCompileInputs.cache
+E:\ifacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CopyComplete
+E:\ifacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.dll
+E:\ifacility\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.pdb
+D:\Ashok\TATA_NEW ORDERS\Anjali\i_facilitylibrary\i_facilitylibrary\bin\Release\i_facilitylibrary.dll
+D:\Ashok\TATA_NEW ORDERS\Anjali\i_facilitylibrary\i_facilitylibrary\bin\Release\i_facilitylibrary.pdb
+D:\Ashok\TATA_NEW ORDERS\Anjali\i_facilitylibrary\i_facilitylibrary\bin\Release\Dapper.dll
+D:\Ashok\TATA_NEW ORDERS\Anjali\i_facilitylibrary\i_facilitylibrary\bin\Release\Dapper.xml
+D:\Ashok\TATA_NEW ORDERS\Anjali\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CoreCompileInputs.cache
+D:\Ashok\TATA_NEW ORDERS\Anjali\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CopyComplete
+D:\Ashok\TATA_NEW ORDERS\Anjali\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.dll
+D:\Ashok\TATA_NEW ORDERS\Anjali\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.pdb
+D:\Ashok\TATA_NEW ORDERS\Anjali\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csprojAssemblyReference.cache
+D:\i_facilitylibrary\i_facilitylibrary\bin\Release\i_facilitylibrary.dll
+D:\i_facilitylibrary\i_facilitylibrary\bin\Release\i_facilitylibrary.pdb
+D:\i_facilitylibrary\i_facilitylibrary\bin\Release\Dapper.dll
+D:\i_facilitylibrary\i_facilitylibrary\bin\Release\Dapper.xml
+D:\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csprojAssemblyReference.cache
+D:\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CoreCompileInputs.cache
+D:\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CopyComplete
+D:\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.dll
+D:\i_facilitylibrary\i_facilitylibrary\obj\Release\i_facilitylibrary.pdb
+G:\TSAL\i_facilitylibrary\bin\Release\i_facilitylibrary.dll
+G:\TSAL\i_facilitylibrary\bin\Release\i_facilitylibrary.pdb
+G:\TSAL\i_facilitylibrary\bin\Release\Dapper.dll
+G:\TSAL\i_facilitylibrary\bin\Release\Dapper.xml
+G:\TSAL\i_facilitylibrary\obj\Release\i_facilitylibrary.csprojAssemblyReference.cache
+G:\TSAL\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CoreCompileInputs.cache
+G:\TSAL\i_facilitylibrary\obj\Release\i_facilitylibrary.csproj.CopyComplete
+G:\TSAL\i_facilitylibrary\obj\Release\i_facilitylibrary.dll
+G:\TSAL\i_facilitylibrary\obj\Release\i_facilitylibrary.pdb
